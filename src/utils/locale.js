@@ -31,6 +31,8 @@ const PATCH_KEYS = {
   3: ['hours', 'minutes', 'seconds', 'milliseconds'],
 };
 
+console.log('******************** local.js ***********');
+
 const token =
   /d{1,2}|W{1,4}|M{1,4}|YY(?:YY)?|S{1,3}|Do|Z{1,4}|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g;
 const twoDigits = /\d\d?/;
@@ -697,6 +699,7 @@ export default class Locale {
   }
 
   getMonthDates(year = 2000) {
+    console.log('******************** getMonthDates ***********', year);
     const dates = [];
     for (let i = 0; i < 12; i++) {
       dates.push(new Date(year, i, 15));
