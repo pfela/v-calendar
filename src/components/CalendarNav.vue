@@ -186,7 +186,8 @@ export default {
     },
     getMonthItems(year) {
       const { month: thisMonth, year: thisYear } = this.pageForDate(new Date());
-      return this.locale.getMonthDates().map((d, i) => {
+      console.log('******************** getMonthItems ***********', year);
+      return this.locale.getMonthDates(year).map((d, i) => {
         const month = i + 1;
         return {
           month,
