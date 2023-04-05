@@ -41,7 +41,7 @@ const RANGE_PRIORITY = {
   BOTH: 3,
 };
 
-console.log('******************** DatePicker ***********');
+console.log('*** DatePicker ***');
 
 export default {
   name: 'DatePicker',

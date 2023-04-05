@@ -31,7 +31,7 @@ const PATCH_KEYS = {
   3: ['hours', 'minutes', 'seconds', 'milliseconds'],
 };
 
-console.log('******************** local.js ***********');
+console.log('*** local.js ***');
 
 const token =
   /d{1,2}|W{1,4}|M{1,4}|YY(?:YY)?|S{1,3}|Do|Z{1,4}|([HhMsDm])\1?|[aA]|"[^"]*"|'[^']*'/g;
@@ -698,8 +698,8 @@ export default class Locale {
     return null;
   }
 
-  getMonthDates(year = 2000) {
-    console.log('******************** getMonthDates ***********', year);
+  getMonthDates(year = 2001) {
+    console.log('*** getMonthDates ***', year);
     const dates = [];
     for (let i = 0; i < 12; i++) {
       dates.push(new Date(year, i, 15));
@@ -712,7 +712,7 @@ export default class Locale {
       month: length,
       timezome: 'UTC',
     });
-    return this.getMonthDates().map(d => dtf.format(d));
+    return this.getMonthDates(2002).map(d => dtf.format(d));
   }
 
   getWeekdayDates(firstDayOfWeek = this.firstDayOfWeek) {
